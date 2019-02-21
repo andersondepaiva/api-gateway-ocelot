@@ -1,0 +1,28 @@
+{
+	"ReRoutes": [{
+			"UpstreamPathTemplate": "/api/pessoa/{catchAll}",
+			"DownstreamPathTemplate": "/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [{
+				"Host": "localhost",
+				"Port": 9001
+			}],
+      "HttpHandlerOptions": {
+        "UseTracing": true
+      }
+		},
+		{
+			"UpstreamPathTemplate": "/api/avaliacao/{catchAll}",
+			"DownstreamPathTemplate": "/{catchAll}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [{
+				"Host": "localhost",
+				"Port": 9002
+			}],
+      "HttpHandlerOptions": {
+        "UseTracing": true
+      }
+		}
+	],
+	"GlobalConfiguration": {}
+}
